@@ -8,10 +8,6 @@ gpgcheck=1
 enabled=1
 EOF
 yum update -y
-sleep 300
 curl -O https://nginx.org/keys/nginx_signing.key
-sleep 5
 rpm --import https://nginx.org/keys/nginx_signing.key
-sleep 5
-sudo yum install nginx
-sudo yum update ngnix
+sudo yum install nginx -y
