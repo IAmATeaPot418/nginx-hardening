@@ -40,8 +40,8 @@ sed -i "s/ssl_session_timeout[^;]*;/ssl_session_timeout 1d;/" /etc/nginx/nginx.c
 echo "server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
-    ssl_certificate /etc/ngnix/certs.pem;
-    ssl_certificate_key /etc/ngnix/certkey.key;
+    ssl_certificate /etc/nginx/cert.crt;
+    ssl_certificate_key /etc/nginx/nginx.key;
     ssl_session_timeout 1d;
     ssl_session_cache shared:SSL:50m;
     ssl_session_tickets off;
