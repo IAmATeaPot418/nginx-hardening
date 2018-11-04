@@ -25,7 +25,7 @@ enabled=1
 EOF
 yum update -y
 curl -O https://nginx.org/keys/nginx_signing.key
-rpm --import https://nginx.org/keys/nginx_signing.key
+rpm --import ./nginx_signing.key
 sudo yum install nginx -y
 
 ```
