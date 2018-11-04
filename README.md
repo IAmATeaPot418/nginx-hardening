@@ -33,7 +33,7 @@ sudo yum install nginx -y
 This is targeted for use on an Ubuntu 16.04 AMI.
 
 ```
-#/bin/bash
+#!/bin/bash
 sudo wget http://nginx.org/keys/nginx_signing.key
 sudo apt-key add nginx_signing.key
 sudo su
