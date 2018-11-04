@@ -23,7 +23,7 @@ sed -i "s/ssl_ciphers[^;]*;/ssl_ciphers ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-
 #If you already have ssl_protocols defined you can harden these to modern standards with the below command. 
 #TLS 1.3 was added in NGNIX 1.13 and is not part of the Mozilla profile as of 11/3/18
 
-sed -i "s/ssl_protocols[^;]*;/ssl_protocols TLSv1.2 TLSv1.3 ;/" /etc/nginx/nginx.conf
+sed -i "s/ssl_protocols[^;]*;/ssl_protocols TLSv1.2 TLSv1.3;/" /etc/nginx/nginx.conf
 
 #This command changes the session match the modern mozilla profile if it is already defined
 
