@@ -1,14 +1,14 @@
-# auto-secure
-This repo will take web servers and provide scripts to launch specific tasks to assist in automation of security hardening
+# Guide to Secure NGNIX to Modern Standards
 
-NGNIX Configuration
-
-How to Install NGNIX
+This repo will provide direction on hardening NGNIX to modern standards.
 
 
+# How to install NGNIX
 
 
-Minimize Features, Content and Options
+
+
+# Minimize Features, Content and Options
 
 	Limit HTTP Request Methods
 	
@@ -42,7 +42,7 @@ Minimize Features, Content and Options
 	
 
 
-Permissions and Ownership
+# Permissions and Ownership
 
 	Run worker proccess as non-privledged user
 	
@@ -54,7 +54,7 @@ Permissions and Ownership
 	
 	
 
-TLS configuration 
+# TLS Configuration
 
 	Redirect HTTP to HTTPS 
 	
@@ -90,7 +90,7 @@ TLS configuration
 	https://docs.nginx.com/nginx/admin-guide/security-controls/securing-http-traffic-upstream/
 	https://docs.nginx.com/nginx/admin-guide/security-controls/terminating-ssl-http/
 	
-Logging and Operations
+# Logging and Operations
 
     Configure Logging for Access Logs to Syslog
     
@@ -104,16 +104,17 @@ Logging and Operations
     Configure the Access Log
     
     Configure the Error Log
+
 		
-		Ensure Buffer Overflow attack protection is enabled
-		
-		https://dev-sec.io/baselines/nginx/
-		
-		Ensure simultaneous sessions are minimized
+    Ensure Buffer Overflow attack protection is enabled
 		
 		https://dev-sec.io/baselines/nginx/
 		
-		Ensure Clickjacking Protection is enabled
+     Ensure simultaneous sessions are minimized
+		
+		https://dev-sec.io/baselines/nginx/
+		
+     Ensure Clickjacking Protection is enabled
 		
 		https://dev-sec.io/baselines/nginx/
 		
@@ -139,7 +140,11 @@ Logging and Operations
 		https://www.scalescale.com/tips/nginx/nginx-security-guide/
 		
 		
-Enable and Configure SELINUX 
+# Enable and Configure SELINUX
 		
     
+# Notes
+	1. Server name indication is configured by default starting in openssl 0.9.8j. NGNIX currently leverages openssl 1.1.1 11/4/18.Reference: 
+	http://nginx.org/en/docs/http/configuring_https_servers.html
+	2. SSL compression is turned off by default in nginx 1.1.6+/1.0.9+ (if OpenSSL 1.0.0+ used) and nginx 1.3.2+/1.2.2+ (if older versions of OpenSSL are used). Reference: https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html#SSL_Compression_(CRIME_attack)
  
