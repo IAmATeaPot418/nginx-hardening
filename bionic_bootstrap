@@ -1,0 +1,10 @@
+echo deb http://nginx.org/packages/ubuntu/ bionic nginx >> /etc/apt/sources.list
+cd /tmp
+wget https://nginx.org/keys/nginx_signing.key
+sudo apt-key add /tmp/nginx_signing.key
+sudo apt-get update -y
+sudo apt-get install nginx -y
+wget https://github.com/IAmATeaPot418/nginx-hardening/nginx.conf
+rm -f /etc/nginx/nginx.conf
+mv /tmp/nginx.conf /etc/nginx/nginx.conf
+service nginx restart
