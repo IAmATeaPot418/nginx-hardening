@@ -14,9 +14,20 @@ sudo apt-get install nginx -y
 #clone my repo in order to grab the nginx.conf file inside.
 git clone https://github.com/IAmATeaPot418/nginx-hardening.git
 #remove existing nginx.conf file
-rm -f /etc/nginx/nginx.conf
+sudo rm -f /etc/nginx/nginx.conf
+#remove index.html
+sudo rm -f /usr/share/nginx/html/index.html
+#remove server error message
+sudo rm -f /usr/share/nginx/html/50x.html
+#move error messages to config
+sudo mv nginx-hardening/50x.html /usr/share/nginx/html/50x.html
 #copy nginx.conf hosted on repo and make it the NGINX configuration file
 mv nginx-hardening/nginx.conf /etc/nginx/nginx.conf
+#copy index.html hosted on repo and make it the NGINX index.html file.
+sudo mv nginx-hardening/index.html /usr/share/nginx/html/index.html
+#copy client side error message and server error messages
+sudo mv nginx-hardening/50x.html /usr/share/nginx/html/index.html
+sudo mv nginx-hardening/40x.html /usr/share/nginx/html/index.html
 #remove the cloned repository because we only needed one file from it.
 rm -rf /tmp/nginx-hardening
 #install aws cli tools to obtain public network info in automated fashion
@@ -36,6 +47,5 @@ cd /etc/nginx
 sudo openssl req -x509 -nodes -days 365 -subj "/C=US/ST=CA/L=SantaClara/O=Jamie/OU=Personal/CN=ILikeNginx" -newkey rsa:2048 -keyout /etc/nginx/nginx-selfsigned.key -out /etc/nginx/nginx-selfsigned.crt
 #recycle nginx to make changes take effect.
 service nginx restart
-
 #TODO
 #Use LetsEncrypt certificate instead of making up my own random name.
