@@ -9,6 +9,9 @@ How to start contributing
 ## How to start contributing
 
 Step 1. Create a virtual machine on the cloud provider of your choice.
+
 Step 2. Open ports 80, 443 and 22 to your machine to your IP Address
+
 Step 3. Run the Bootstrap script for either Centos 8 or Bionic Ubuntu.
+
 Step 4. Start testing and contributing your ideas.
