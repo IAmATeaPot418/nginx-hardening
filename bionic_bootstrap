@@ -26,8 +26,7 @@ mv nginx-hardening/nginx.conf /etc/nginx/nginx.conf
 #copy index.html hosted on repo and make it the NGINX index.html file.
 sudo mv nginx-hardening/index.html /usr/share/nginx/html/index.html
 #copy client side error message and server error messages
-sudo mv nginx-hardening/50x.html /usr/share/nginx/html/index.html
-sudo mv nginx-hardening/40x.html /usr/share/nginx/html/index.html
+sudo mv nginx-hardening/40x.html /usr/share/nginx/html/40x.html
 #remove the cloned repository because we only needed one file from it.
 rm -rf /tmp/nginx-hardening
 #install aws cli tools to obtain public network info in automated fashion
