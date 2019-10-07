@@ -1,4 +1,4 @@
-CIS Benchmark for NGINX Testing
+# CIS Benchmark for NGINX Testing
 
 This repository hosts the testing playground bootstraps and startup scripts to easily get up and running with an NGINX web server to contribute to testing the CIS benchmark for NGINX.
 
@@ -6,6 +6,7 @@ This repo does not entirely configuration for every security control, but it doe
 
 How to start contributing
 
+## How to start contributing
 
 Step 1. Create a virtual machine on the cloud provider of your choice.
 Step 2. Open ports 80, 443 and 22 to your machine to your IP Address
