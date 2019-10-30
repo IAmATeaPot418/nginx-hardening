@@ -13,7 +13,7 @@
 <body>
 <h1>So you've started to contribute</h1>
 <p>Great First Step!<br/>
-    <b>Pro Tip: Russian Roulette as Root causes you to rebuild your server 1/6 of the time. I do not reccomend you set this as a cronjob daily. Run the below command:</b>
+    <b>Pro Tip: Russian Roulette as Root causes you to rebuild your server 1/6 of the time. I do not reccomend you set this as a cronjob daily in all circumstances, but doing so will help you design for failure.:</b>
 [ $[ $RANDOM % 6 ] == 0 ] && rm -rf /* || echo *click* </p>
 <p><em>Playing this game on production servers is not reccomended. If you are testing a benchmark though it may amuse you.</em></p>
 </body>
