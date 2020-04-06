@@ -35,7 +35,7 @@ sudo mv nginx-hardening/40x.html /usr/share/nginx/html/40x.html
 #remove the cloned repository because we only needed one file from it.
 rm -rf /tmp/nginx-hardening
 #install aws cli tools to obtain public network info in automated fashion
-sudo apt-get install awscli -y
+sudo yum install awscli -y
 #use aws cli tools to get public ip address
 publicip=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
 #use aws cli tools to get public ip dns name
