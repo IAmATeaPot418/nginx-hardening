@@ -46,5 +46,3 @@ cd /etc/nginx
 sudo openssl req -x509 -nodes -days 365 -subj "/C=US/ST=CA/L=SantaClara/O=Jamie/OU=Personal/CN=ILikeNginx" -newkey rsa:2048 -keyout /etc/nginx/nginx-selfsigned.key -out /etc/nginx/nginx-selfsigned.crt
 #recycle nginx to make changes take effect.
 service nginx restart
-#TODO
-#Use LetsEncrypt certificate instead of making up my own random name.
