@@ -45,4 +45,4 @@ cd /etc/nginx
 #create a self-signed certificate
 sudo openssl req -x509 -nodes -days 365 -subj "/C=US/ST=CA/L=SantaClara/O=Jamie/OU=Personal/CN=ILikeNginx" -newkey rsa:2048 -keyout /etc/nginx/nginx-selfsigned.key -out /etc/nginx/nginx-selfsigned.crt
 #recycle nginx to make changes take effect.
-service nginx restart
+systemctl restart nginx
